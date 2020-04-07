@@ -764,20 +764,20 @@ var Scale = Element.extend({
 	 * labels where offset indicates the anchor point offset from the top in pixels.
 	 * @private
 	 */
-	_computeLabelSizes() {
-		const me = this;
-		const ctx = me.ctx;
-		const caches = me._longestTextCache;
-		const sampleSize = me.options.ticks.sampleSize;
-		const widths = [];
-		const heights = [];
-		const offsets = [];
-		let ticks = me.ticks;
+	_computeLabelSizes: function() {
+		var me = this;
+		var ctx = me.ctx;
+		var caches = me._longestTextCache;
+		var sampleSize = me.options.ticks.sampleSize;
+		var widths = [];
+		var heights = [];
+		var offsets = [];
+		var ticks = me.ticks;
 		if (sampleSize < ticks.length) {
 			ticks = sample(ticks, sampleSize);
 		}
-		const length = ticks.length;
-		let i, j, jlen, label, tickFont, fontString, cache, lineHeight, width, height, nestedLabel, widest, highest;
+		var length = ticks.length;
+		var i, j, jlen, label, tickFont, fontString, cache, lineHeight, width, height, nestedLabel, widest, highest;
 
 		for (i = 0; i < length; ++i) {
 			label = ticks[i].label;
@@ -1423,10 +1423,10 @@ var Scale = Element.extend({
 			});
 	},
 
-	_resolveTickFontOptions(index) {
-		const me = this;
-		const options = me.options.ticks;
-		const context = {
+	_resolveTickFontOptions: function(index) {
+		var me = this;
+		var options = me.options.ticks;
+		var context = {
 			chart: me.chart,
 			scale: me,
 			tick: me.ticks[index],
