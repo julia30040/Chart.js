@@ -9,6 +9,7 @@ var isArray = helpers.isArray;
 var isNullOrUndef = helpers.isNullOrUndef;
 var valueOrDefault = helpers.valueOrDefault;
 var valueAtIndexOrDefault = helpers.valueAtIndexOrDefault;
+var resolve = helpers.options.resolve;
 
 defaults._set('scale', {
 	display: true,
