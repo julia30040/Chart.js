@@ -333,8 +333,7 @@ var Scale = Element.extend({
 		me.ticks = null;
 		me._labelSizes = null;
 		me._maxLabelLines = 0;
-		me.longestLabelWidth = 0;
-		me.longestTextCache = me.longestTextCache || {};
+		me._longestTextCache = me._longestTextCache || {};
 		me._gridLineItems = null;
 		me._labelItems = null;
 
